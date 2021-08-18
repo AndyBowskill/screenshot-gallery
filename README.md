@@ -1,1 +1,3 @@
-# screenshot-gallery
+# Screenshot gallery
+
+A React website.
