@@ -1,4 +1,5 @@
 import React from "react";
+import ItemList from "../components/ItemList/ItemList.component";
 import Navigation from "../components/Navigation/Navigation.component";
 import ScreenshotForm from "../components/ScreenshotForm/ScreenshotForm.component";
 
@@ -7,8 +8,7 @@ class App extends React.Component {
     super();
     this.state = {
       input: '',
-      screenshotURL: ''
-
+      screenshots: []
     };
   }
 
@@ -17,7 +17,18 @@ class App extends React.Component {
   };
 
   onSaveButtonClick = () => {
-    this.setState({ screenshotURL: this.state.input });
+    fetch('http://localhost:3000/screenshot', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        url: this.state.input,
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      this.setState({ screenshots: data });
+    })
+
   }
 
   render() {
@@ -28,6 +39,7 @@ class App extends React.Component {
           onInputChange={this.onInputChange}
           onSaveButtonClick={this.onSaveButtonClick}
         />
+        <ItemList items={this.state.screenshots} />
       </div>
     );
   }

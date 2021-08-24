@@ -1,34 +1,28 @@
 .form.flex {
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 .form input {
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 1rem;
-    padding: 16px 16px;
-    margin: 10px 5px 10px 10px;
-    min-width: 64%;
-    border-top: 2px solid #0074D9;
-    border-left: 2px solid #0074D9;
-    border-bottom: 2px solid #0074D9;
-    border-right: 2px solid #0074D9;
-
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1rem;
+  padding: 16px 16px;
+  margin: 10px 5px 10px 10px;
+  min-width: 64%;
+  border: 1px solid #0074d9;
+  border-radius: 5px;
 }
-  
+
 .form button {
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 1rem;
-    background-color: rgb(127, 219, 255);
-    color: #0074D9;
-    padding: 12px 30px;
-    margin: 10px 10px 10px 5px;
-    text-align: center;
-    text-decoration: none;
-    border-top: 2px solid #0074D9;
-    border-left: 2px solid #0074D9;
-    border-bottom: 2px solid #0074D9;
-    border-right: 2px solid #0074D9;
-    cursor: pointer;
-} 
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1rem;
+  background-color: rgb(127, 219, 255);
+  color: #0074d9;
+  padding: 12px 30px;
+  margin: 10px 10px 10px 5px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #0074d9;
+  cursor: pointer;
+  border-radius: 5px;
+}

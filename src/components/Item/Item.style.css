@@ -1,0 +1,16 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transition: transform 0.25s ease-out;
+    border: 1px solid #0074D9;
+  }
+  
+  .item:hover {
+    transform: scale(1.1);
+  }
