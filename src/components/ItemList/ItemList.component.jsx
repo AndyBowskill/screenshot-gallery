@@ -5,9 +5,9 @@ import './ItemList.style.css';
 const ItemList = (props) => {
   return (
     <div className='itemlist'>
-        {props.items.map((item) => (
-            <Item item={item} />
-        ))}
+      {props.items.map((item) => (
+        <Item item={item} />
+      ))}
     </div>
   );
 };

@@ -1,14 +1,14 @@
-import React from "react";
-import ItemList from "../components/ItemList/ItemList.component";
-import Navigation from "../components/Navigation/Navigation.component";
-import ScreenshotForm from "../components/ScreenshotForm/ScreenshotForm.component";
+import React from 'react';
+import ItemList from '../components/ItemList/ItemList.component';
+import Navigation from '../components/Navigation/Navigation.component';
+import ScreenshotForm from '../components/ScreenshotForm/ScreenshotForm.component';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       input: '',
-      screenshots: []
+      screenshots: [],
     };
   }
 
@@ -19,23 +19,22 @@ class App extends React.Component {
   onSaveButtonClick = () => {
     fetch('http://localhost:3000/screenshot', {
       method: 'post',
-      headers: {'Content-Type': 'application/json'},
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         url: this.state.input,
-      })
+      }),
     })
-    .then(response => response.json())
-    .then(data => {
-      this.setState({ screenshots: data });
-    })
-
-  }
+      .then((response) => response.json())
+      .then((data) => {
+        this.setState({ screenshots: data });
+      });
+  };
 
   render() {
     return (
       <div>
         <Navigation />
-        <ScreenshotForm 
+        <ScreenshotForm
           onInputChange={this.onInputChange}
           onSaveButtonClick={this.onSaveButtonClick}
         />
