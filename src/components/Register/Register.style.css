@@ -1,35 +1,35 @@
-.screenshotform.flex {
+.register.flex {
   display: flex;
   justify-content: center;
   padding: 16px;
 }
 
-.screenshotform input {
+.register input {
   font-family: 'Didact Gothic', sans-serif;
   font-size: 1rem;
-  padding: 16px;
-  margin: 12px 4px 12px 12px;
-  width: 100%;
   border: 1px solid #0074d9;
   border-radius: 5px;
+  width: 94%;
+  padding: 16px;
+  margin: 12px 0 12px 0;
 }
 
-.screenshotform button {
+.register button {
   font-family: 'Didact Gothic', sans-serif;
   font-size: 1rem;
   background-color: rgb(127, 219, 255);
   color: #0074d9;
-  padding: 12px 24px;
-  margin: 12px 12px 12px 4px;
+  padding: 12px 30px;
+  margin: 12px 0 24px 0;
   text-align: center;
   text-decoration: none;
   border: 1px solid #0074d9;
   cursor: pointer;
   border-radius: 5px;
-  width: 100px;
+  width: 100%;
   opacity: 0.9;
 }
 
-.screenshotform button:hover {
+.register button:hover {
   opacity: 1;
 }

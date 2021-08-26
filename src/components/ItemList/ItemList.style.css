@@ -1,6 +1,6 @@
 .itemlist {
   width: 85vw;
-  margin: 1em auto 1em auto;
+  margin: 0 auto 1em auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
