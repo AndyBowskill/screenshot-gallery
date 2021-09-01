@@ -62,7 +62,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navigation />
+        <Navigation
+          onRouteChange={this.onRouteChange}
+          isUserSignedIn={this.state.isUserSignedIn}
+        />
         {(() => {
           switch (this.state.route) {
             case 'register':
