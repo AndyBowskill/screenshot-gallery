@@ -1,0 +1,35 @@
+.signin.flex {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+.signin input {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1rem;
+  border: 1px solid #0074d9;
+  border-radius: 5px;
+  width: 94%;
+  padding: 16px;
+  margin: 12px 0 12px 0;
+}
+
+.signin button {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 1rem;
+  background-color: rgb(127, 219, 255);
+  color: #0074d9;
+  padding: 12px 30px;
+  margin: 12px 0 24px 0;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #0074d9;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.signin button:hover {
+  opacity: 1;
+}

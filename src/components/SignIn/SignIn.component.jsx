@@ -1,7 +1,8 @@
 import React from 'react';
-import './Register.style.css';
 
-class Register extends React.Component {
+import './SignIn.style.css';
+
+class SignIn extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -18,8 +19,8 @@ class Register extends React.Component {
     this.setState({ password: event.target.value });
   };
 
-  onRegisterSumbit = () => {
-    fetch('http://localhost:3000/register', {
+  onSignInSumbit = () => {
+    fetch('http://localhost:3000/signin', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -37,10 +38,9 @@ class Register extends React.Component {
   render() {
     return (
       <article>
-        <div className='register flex'>
+        <div className='signin flex'>
           <div>
-            <h1>Register</h1>
-            <p>Please fill in this form to create an account.</p>
+            <h1>Sign In</h1>
 
             <label htmlFor='email'>Email</label>
             <input
@@ -62,8 +62,8 @@ class Register extends React.Component {
               onChange={this.onPasswordChange}
             />
 
-            <button type='submit' onClick={this.onRegisterSumbit}>
-              Register
+            <button type='submit' onClick={this.onSignInSumbit}>
+              Sign In
             </button>
           </div>
         </div>
@@ -72,4 +72,4 @@ class Register extends React.Component {
   }
 }
 
-export default Register;
+export default SignIn;
