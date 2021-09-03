@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScreenshotForm component displays correctly. 1`] = `
+<section>
+  <div
+    className="screenshotform flex"
+  >
+    <input
+      onChange={[Function]}
+      placeholder="Please enter a website"
+      type="text"
+    />
+    <button
+      onClick={[Function]}
+    >
+      Save
+    </button>
+  </div>
+</section>
+`;

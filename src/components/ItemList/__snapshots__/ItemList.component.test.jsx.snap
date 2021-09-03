@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemList component displays correctly. 1`] = `
+<div
+  className="itemlist"
+>
+  <div
+    className="item"
+  >
+    <img
+      alt="www.amazon.co.uk"
+      height="169px"
+      src=""
+      width="300px"
+    />
+    <p>
+      www.amazon.co.uk
+    </p>
+  </div>
+  <div
+    className="item"
+  >
+    <img
+      alt="www.twitter.com"
+      height="169px"
+      src=""
+      width="300px"
+    />
+    <p>
+      www.twitter.com
+    </p>
+  </div>
+</div>
+`;

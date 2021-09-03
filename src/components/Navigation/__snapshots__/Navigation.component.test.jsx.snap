@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation component displays correctly when the user is signed in. 1`] = `
+<nav
+  className="navigation"
+>
+  <p
+    onClick={[Function]}
+  >
+    Sign Out
+  </p>
+</nav>
+`;
+
+exports[`Navigation component displays correctly when the user is signed out. 1`] = `
+<nav
+  className="navigation"
+>
+  <p
+    onClick={[Function]}
+  >
+    Sign In
+  </p>
+  <p
+    onClick={[Function]}
+  >
+    Register
+  </p>
+</nav>
+`;
