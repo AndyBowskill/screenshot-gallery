@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Item from './Item.component';
+import Item from '../Item.component';
 
 const item = {
   url: 'www.amazon.co.uk',

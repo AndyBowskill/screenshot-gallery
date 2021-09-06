@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ScreenshotForm from './ScreenshotForm.component';
+import ScreenshotForm from '../ScreenshotForm.component';
 
 const onInputChange = (event) => {
   // Empty function

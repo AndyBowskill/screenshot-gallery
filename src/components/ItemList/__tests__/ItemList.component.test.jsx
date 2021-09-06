@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import ItemList from './ItemList.component';
+import ItemList from '../ItemList.component';
 
 const items = [
   {
