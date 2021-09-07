@@ -3,7 +3,7 @@ import './Item.style.css';
 
 const Item = (props) => {
   return (
-    <div className='item'>
+    <article className='item'>
       <img
         alt={props.item.url}
         src={props.item.screenshot}
@@ -11,7 +11,7 @@ const Item = (props) => {
         height='169px'
       />
       <p>{props.item.url}</p>
-    </div>
+    </article>
   );
 };
 

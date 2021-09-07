@@ -41,6 +41,10 @@ class App extends React.Component {
     });
   };
 
+  loadScreenshots = (screenshots) => {
+    this.setState({ screenshots: screenshots });
+  };
+
   onInputChange = (event) => {
     this.setState({ input: event.target.value });
   };
@@ -50,12 +54,13 @@ class App extends React.Component {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
+        email: this.state.user.email,
         url: this.state.input,
       }),
     })
       .then((response) => response.json())
       .then((data) => {
-        this.setState({ screenshots: data });
+        this.loadScreenshots(data.screenshots);
       });
   };
 
@@ -80,6 +85,7 @@ class App extends React.Component {
                 <SignIn
                   onRouteChange={this.onRouteChange}
                   loadUser={this.loadUser}
+                  loadScreenshots={this.loadScreenshots}
                 />
               );
             case 'home':

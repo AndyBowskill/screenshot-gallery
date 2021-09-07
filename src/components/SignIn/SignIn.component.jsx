@@ -29,45 +29,46 @@ class SignIn extends React.Component {
       }),
     })
       .then((response) => response.json())
-      .then((user) => {
-        this.props.loadUser(user);
-        this.props.onRouteChange('home');
+      .then((data) => {
+        if (data.user) {
+          this.props.loadUser(data.user);
+          this.props.loadScreenshots(data.screenshots);
+          this.props.onRouteChange('home');
+        }
       });
   };
 
   render() {
     return (
-      <article>
-        <div className='signin flex'>
-          <div>
-            <h1>Sign In</h1>
+      <section className='signin flex'>
+        <div>
+          <h1>Sign In</h1>
 
-            <label htmlFor='email'>Email</label>
-            <input
-              type='text'
-              placeholder='Please enter email'
-              name='email'
-              id='email'
-              required
-              onChange={this.onEmailChange}
-            />
+          <label htmlFor='email'>Email</label>
+          <input
+            type='text'
+            placeholder='Please enter email'
+            name='email'
+            id='email'
+            required
+            onChange={this.onEmailChange}
+          />
 
-            <label htmlFor='psw'>Password</label>
-            <input
-              type='password'
-              placeholder='Please enter password'
-              name='psw'
-              id='psw'
-              required
-              onChange={this.onPasswordChange}
-            />
+          <label htmlFor='psw'>Password</label>
+          <input
+            type='password'
+            placeholder='Please enter password'
+            name='psw'
+            id='psw'
+            required
+            onChange={this.onPasswordChange}
+          />
 
-            <button type='submit' onClick={this.onSignInSumbit}>
-              Sign In
-            </button>
-          </div>
+          <button type='submit' onClick={this.onSignInSumbit}>
+            Sign In
+          </button>
         </div>
-      </article>
+      </section>
     );
   }
 }

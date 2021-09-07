@@ -36,38 +36,36 @@ class Register extends React.Component {
 
   render() {
     return (
-      <article>
-        <div className='register flex'>
-          <div>
-            <h1>Register</h1>
-            <p>Please fill in this form to create an account.</p>
+      <section className='register flex'>
+        <div>
+          <h1>Register</h1>
+          <p>Please fill in this form to create an account.</p>
 
-            <label htmlFor='email'>Email</label>
-            <input
-              type='text'
-              placeholder='Please enter email'
-              name='email'
-              id='email'
-              required
-              onChange={this.onEmailChange}
-            />
+          <label htmlFor='email'>Email</label>
+          <input
+            type='text'
+            placeholder='Please enter email'
+            name='email'
+            id='email'
+            required
+            onChange={this.onEmailChange}
+          />
 
-            <label htmlFor='psw'>Password</label>
-            <input
-              type='password'
-              placeholder='Please enter password'
-              name='psw'
-              id='psw'
-              required
-              onChange={this.onPasswordChange}
-            />
+          <label htmlFor='psw'>Password</label>
+          <input
+            type='password'
+            placeholder='Please enter password'
+            name='psw'
+            id='psw'
+            required
+            onChange={this.onPasswordChange}
+          />
 
-            <button type='submit' onClick={this.onRegisterSumbit}>
-              Register
-            </button>
-          </div>
+          <button type='submit' onClick={this.onRegisterSumbit}>
+            Register
+          </button>
         </div>
-      </article>
+      </section>
     );
   }
 }

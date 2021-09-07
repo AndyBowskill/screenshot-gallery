@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Item component displays correctly. 1`] = `
-<div
+<article
   className="item"
 >
   <img
@@ -13,5 +13,5 @@ exports[`Item component displays correctly. 1`] = `
   <p>
     www.amazon.co.uk
   </p>
-</div>
+</article>
 `;

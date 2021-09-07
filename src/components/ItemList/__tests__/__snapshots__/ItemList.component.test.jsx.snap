@@ -4,7 +4,7 @@ exports[`ItemList component displays correctly. 1`] = `
 <div
   className="itemlist"
 >
-  <div
+  <article
     className="item"
   >
     <img
@@ -16,8 +16,8 @@ exports[`ItemList component displays correctly. 1`] = `
     <p>
       www.amazon.co.uk
     </p>
-  </div>
-  <div
+  </article>
+  <article
     className="item"
   >
     <img
@@ -29,6 +29,6 @@ exports[`ItemList component displays correctly. 1`] = `
     <p>
       www.twitter.com
     </p>
-  </div>
+  </article>
 </div>
 `;
