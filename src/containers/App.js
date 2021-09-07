@@ -78,6 +78,7 @@ class App extends React.Component {
                 <Register
                   onRouteChange={this.onRouteChange}
                   loadUser={this.loadUser}
+                  loadScreenshots={this.loadScreenshots}
                 />
               );
             case 'signin':
