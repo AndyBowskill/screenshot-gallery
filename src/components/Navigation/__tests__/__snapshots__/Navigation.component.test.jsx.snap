@@ -9,15 +9,15 @@ exports[`Navigation component displays correctly when the user is signed in. 1`]
   >
     Screenshot Gallery
   </p>
-  <div
+  <ul
     className="navigation-links"
   >
-    <p
+    <li
       onClick={[Function]}
     >
       Sign Out
-    </p>
-  </div>
+    </li>
+  </ul>
 </nav>
 `;
 
