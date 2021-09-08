@@ -1,15 +1,28 @@
 .navigation {
-  display: flex;
-  justify-content: flex-end;
   font-size: 1.2rem;
   background-color: #0074d9;
   color: rgb(127, 219, 255);
   padding: 20px 20px;
   border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navigation p {
+.navigation-links {
+  display: flex;
+  margin: 0;
+  padding: 0 10px 0 10px;
+}
+
+.navigation-links li {
+  margin: 0 10px 0 10px;
+  padding: 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.navigation-logo {
   padding: 0 10px 0 10px;
   margin: 0;
-  cursor: pointer;
 }

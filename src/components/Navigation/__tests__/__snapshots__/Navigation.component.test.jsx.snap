@@ -5,10 +5,19 @@ exports[`Navigation component displays correctly when the user is signed in. 1`]
   className="navigation"
 >
   <p
-    onClick={[Function]}
+    className="navigation-logo"
   >
-    Sign Out
+    Screenshot Gallery
   </p>
+  <div
+    className="navigation-links"
+  >
+    <p
+      onClick={[Function]}
+    >
+      Sign Out
+    </p>
+  </div>
 </nav>
 `;
 
@@ -17,14 +26,23 @@ exports[`Navigation component displays correctly when the user is signed out. 1`
   className="navigation"
 >
   <p
-    onClick={[Function]}
+    className="navigation-logo"
   >
-    Sign In
+    Screenshot Gallery
   </p>
-  <p
-    onClick={[Function]}
+  <ul
+    className="navigation-links"
   >
-    Register
-  </p>
+    <li
+      onClick={[Function]}
+    >
+      Sign In
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Register
+    </li>
+  </ul>
 </nav>
 `;
