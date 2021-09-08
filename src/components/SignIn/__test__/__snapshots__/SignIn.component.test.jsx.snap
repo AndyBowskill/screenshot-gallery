@@ -5,9 +5,9 @@ exports[`SignIn component displays correctly. 1`] = `
   className="signin flex"
 >
   <div>
-    <h1>
+    <h3>
       Sign In
-    </h1>
+    </h3>
     <label
       htmlFor="email"
     >

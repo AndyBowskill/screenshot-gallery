@@ -42,7 +42,7 @@ class SignIn extends React.Component {
     return (
       <section className='signin flex'>
         <div>
-          <h1>Sign In</h1>
+          <h3>Sign In</h3>
 
           <label htmlFor='email'>Email</label>
           <input

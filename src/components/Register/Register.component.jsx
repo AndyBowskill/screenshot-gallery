@@ -6,12 +6,17 @@ class Register extends React.Component {
     super();
     this.state = {
       email: '',
+      name: '',
       password: '',
     };
   }
 
   onEmailChange = (event) => {
     this.setState({ email: event.target.value });
+  };
+
+  onNameChange = (event) => {
+    this.setState({ name: event.target.value });
   };
 
   onPasswordChange = (event) => {
@@ -24,6 +29,7 @@ class Register extends React.Component {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email: this.state.email,
+        name: this.state.name,
         password: this.state.password,
       }),
     })
@@ -41,8 +47,7 @@ class Register extends React.Component {
     return (
       <section className='register flex'>
         <div>
-          <h1>Register</h1>
-          <p>Please fill in this form to create an account.</p>
+          <h3>Register</h3>
 
           <label htmlFor='email'>Email</label>
           <input
@@ -52,6 +57,16 @@ class Register extends React.Component {
             id='email'
             required
             onChange={this.onEmailChange}
+          />
+
+          <label htmlFor='name'>Name</label>
+          <input
+            type='text'
+            placeholder='Please enter name'
+            name='name'
+            id='name'
+            required
+            onChange={this.onNameChange}
           />
 
           <label htmlFor='psw'>Password</label>

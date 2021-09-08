@@ -103,7 +103,6 @@ class App extends React.Component {
               break;
           }
         })()}
-        ;
       </div>
     );
   }
