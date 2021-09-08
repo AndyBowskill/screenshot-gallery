@@ -2,13 +2,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import ScreenshotForm from '../ScreenshotForm.component';
 
-const onInputChange = (event) => {
-  // Empty function
-};
-
-const onSaveButtonClick = () => {
-  // Empty function
-};
+const onInputChange = jest.fn();
+const onSaveButtonClick = jest.fn();
 
 test('ScreenshotForm component displays correctly.', () => {
   const component = renderer.create(

@@ -6,12 +6,12 @@ exports[`ScreenshotForm component displays correctly. 1`] = `
     className="screenshotform flex"
   >
     <input
-      onChange={[Function]}
+      onChange={[MockFunction]}
       placeholder="Please enter a website"
       type="text"
     />
     <button
-      onClick={[Function]}
+      onClick={[MockFunction]}
     >
       Save
     </button>

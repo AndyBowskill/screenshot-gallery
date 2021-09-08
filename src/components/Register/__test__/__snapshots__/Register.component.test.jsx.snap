@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register component displays correctly. 1`] = `
+<section
+  className="register flex"
+>
+  <div>
+    <h1>
+      Register
+    </h1>
+    <p>
+      Please fill in this form to create an account.
+    </p>
+    <label
+      htmlFor="email"
+    >
+      Email
+    </label>
+    <input
+      id="email"
+      name="email"
+      onChange={[Function]}
+      placeholder="Please enter email"
+      required={true}
+      type="text"
+    />
+    <label
+      htmlFor="psw"
+    >
+      Password
+    </label>
+    <input
+      id="psw"
+      name="psw"
+      onChange={[Function]}
+      placeholder="Please enter password"
+      required={true}
+      type="password"
+    />
+    <button
+      onClick={[Function]}
+      type="submit"
+    >
+      Register
+    </button>
+  </div>
+</section>
+`;

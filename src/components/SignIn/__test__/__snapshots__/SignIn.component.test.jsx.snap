@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignIn component displays correctly. 1`] = `
+<section
+  className="signin flex"
+>
+  <div>
+    <h1>
+      Sign In
+    </h1>
+    <label
+      htmlFor="email"
+    >
+      Email
+    </label>
+    <input
+      id="email"
+      name="email"
+      onChange={[Function]}
+      placeholder="Please enter email"
+      required={true}
+      type="text"
+    />
+    <label
+      htmlFor="psw"
+    >
+      Password
+    </label>
+    <input
+      id="psw"
+      name="psw"
+      onChange={[Function]}
+      placeholder="Please enter password"
+      required={true}
+      type="password"
+    />
+    <button
+      onClick={[Function]}
+      type="submit"
+    >
+      Sign In
+    </button>
+  </div>
+</section>
+`;
