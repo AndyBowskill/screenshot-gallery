@@ -24,7 +24,7 @@ class Register extends React.Component {
   };
 
   onRegisterSumbit = () => {
-    fetch('https://rocky-ravine-50440.herokuapp.com/register', {
+    fetch('https://screenshot-gallery-api.herokuapp.com/register', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

@@ -20,7 +20,7 @@ class SignIn extends React.Component {
   };
 
   onSignInSumbit = () => {
-    fetch('https://rocky-ravine-50440.herokuapp.com/signin', {
+    fetch('https://screenshot-gallery-api.herokuapp.com/signin', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

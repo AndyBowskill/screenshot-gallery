@@ -50,7 +50,7 @@ class App extends React.Component {
   };
 
   onSaveButtonClick = () => {
-    fetch('https://rocky-ravine-50440.herokuapp.com/screenshot', {
+    fetch('https://screenshot-gallery-api.herokuapp.com/screenshot', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
