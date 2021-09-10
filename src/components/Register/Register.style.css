@@ -9,7 +9,7 @@
   font-size: 1rem;
   border: 1px solid #0074d9;
   border-radius: 5px;
-  width: 100%;
+  width: 340px;
   display: block;
   box-sizing: border-box;
   padding: 16px;
@@ -28,7 +28,7 @@
   border: 1px solid #0074d9;
   cursor: pointer;
   border-radius: 5px;
-  width: 100%;
+  width: 340px;
   display: block;
   opacity: 0.9;
 }
