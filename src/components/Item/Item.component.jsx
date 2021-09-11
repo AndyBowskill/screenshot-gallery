@@ -7,8 +7,8 @@ const Item = (props) => {
       <img
         alt={props.item.url}
         src={props.item.screenshot}
-        width='300px'
-        height='169px'
+        width='400px'
+        height='300px'
       />
       <p>{props.item.url}</p>
     </article>

@@ -6,9 +6,9 @@ exports[`Item component displays correctly. 1`] = `
 >
   <img
     alt="www.amazon.co.uk"
-    height="169px"
+    height="300px"
     src=""
-    width="300px"
+    width="400px"
   />
   <p>
     www.amazon.co.uk
