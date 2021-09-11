@@ -9,9 +9,9 @@ exports[`ItemList component displays correctly. 1`] = `
   >
     <img
       alt="www.amazon.co.uk"
-      height="300px"
+      height="225px"
       src=""
-      width="400px"
+      width="300px"
     />
     <p>
       www.amazon.co.uk
@@ -22,9 +22,9 @@ exports[`ItemList component displays correctly. 1`] = `
   >
     <img
       alt="www.twitter.com"
-      height="300px"
+      height="225px"
       src=""
-      width="400px"
+      width="300px"
     />
     <p>
       www.twitter.com
