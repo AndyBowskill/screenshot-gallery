@@ -9,7 +9,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      input: '',
+      inputWebsite: '',
       screenshots: [],
       route: 'signin',
       isUserSignedIn: false,
@@ -18,6 +18,7 @@ class App extends React.Component {
         email: '',
         name: '',
       },
+      isDisabled: true,
     };
   }
 
@@ -45,17 +46,24 @@ class App extends React.Component {
     this.setState({ screenshots: screenshots });
   };
 
-  onInputChange = (event) => {
-    this.setState({ input: event.target.value });
+  onInputWebsiteChange = (event) => {
+    this.setState({ inputWebsite: event.target.value });
+    if (event.target.value === '') {
+      this.setState({ isDisabled: true });
+    } else {
+      this.setState({ isDisabled: false });
+    }
   };
 
   onSaveButtonClick = () => {
+    this.setState({ isDisabled: true });
+
     fetch('https://screenshot-gallery-api.herokuapp.com/screenshot', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         email: this.state.user.email,
-        url: this.state.input,
+        url: this.state.inputWebsite,
       }),
     })
       .then((response) => response.json())
@@ -93,8 +101,9 @@ class App extends React.Component {
               return (
                 <div>
                   <ScreenshotForm
-                    onInputChange={this.onInputChange}
+                    onInputWebsiteChange={this.onInputWebsiteChange}
                     onSaveButtonClick={this.onSaveButtonClick}
+                    isDisabled={this.state.isDisabled}
                   />
                   <ItemList items={this.state.screenshots} />
                 </div>

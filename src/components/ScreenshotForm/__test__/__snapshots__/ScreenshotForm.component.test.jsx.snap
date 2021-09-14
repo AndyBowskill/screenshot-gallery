@@ -6,6 +6,8 @@ exports[`ScreenshotForm component displays correctly. 1`] = `
     className="screenshotform flex"
   >
     <input
+      id="inputWebsite"
+      name="inputWebsite"
       onChange={[MockFunction]}
       placeholder="Please enter a website"
       type="text"

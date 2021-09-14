@@ -30,6 +30,16 @@
   opacity: 0.9;
 }
 
-.screenshotform button:hover {
+.screenshotform button:hover,
+.screenshotform button[hover] {
   opacity: 1;
+}
+
+.screenshotform button:disabled,
+.screenshotform button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+  opacity: 0.9;
 }
