@@ -13,6 +13,7 @@ exports[`ScreenshotForm component displays correctly. 1`] = `
       type="text"
     />
     <button
+      disabled={[MockFunction]}
       onClick={[MockFunction]}
     >
       Save
