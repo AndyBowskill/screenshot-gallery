@@ -14,8 +14,17 @@ exports[`ItemList component displays correctly. 1`] = `
       width="300px"
     />
     <p>
-      www.amazon.co.uk
+      Web address:
     </p>
+    <a
+      href="www.amazon.co.uk"
+      rel="noopener"
+      target="_blank"
+    >
+      <p>
+        www.amazon.co.uk
+      </p>
+    </a>
   </article>
   <article
     className="item"
@@ -27,8 +36,17 @@ exports[`ItemList component displays correctly. 1`] = `
       width="300px"
     />
     <p>
-      www.twitter.com
+      Web address:
     </p>
+    <a
+      href="www.twitter.com"
+      rel="noopener"
+      target="_blank"
+    >
+      <p>
+        www.twitter.com
+      </p>
+    </a>
   </article>
 </div>
 `;

@@ -4,11 +4,35 @@
   width: 300px;
   border-radius: 5px;
   padding: 20px;
-  cursor: pointer;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   transition: transform 0.25s ease-out;
   border: 1px solid #0074d9;
+}
+
+.item p {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+.item a {
+  color: #0074d9;
+}
+
+.item a:link {
+  color: #0074d9;
+}
+
+.item a:visited {
+  color: #0074d9;
+}
+
+.item a:hover {
+  color: #0059a6;
+}
+
+.item a:active {
+  color: #0059a6;
 }
 
 .item:hover {

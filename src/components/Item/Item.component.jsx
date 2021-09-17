@@ -10,7 +10,10 @@ const Item = (props) => {
         width='300px'
         height='225px'
       />
-      <p>{props.item.url}</p>
+      <p>Web address:</p>
+      <a href={props.item.url} target='_blank' rel='noopener'>
+        <p>{props.item.url}</p>
+      </a>
     </article>
   );
 };

@@ -1,5 +1,5 @@
 .navigation {
-  font-size: 1.2rem;
+  font-size: 1rem;
   background-color: #0074d9;
   color: rgb(127, 219, 255);
   padding: 20px 20px;
@@ -25,4 +25,10 @@
 .navigation-logo {
   padding: 0 10px 0 10px;
   margin: 0;
+}
+
+@media only screen and (min-width: 480px) {
+  .navigation {
+    font-size: 1.2rem;
+  }
 }

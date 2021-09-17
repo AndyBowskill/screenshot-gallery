@@ -4,6 +4,10 @@
   padding: 16px;
 }
 
+.register.flex h3 {
+  font-size: 1rem;
+}
+
 .register input {
   font-family: 'Didact Gothic', sans-serif;
   font-size: 1rem;
@@ -35,4 +39,10 @@
 
 .register button:hover {
   opacity: 1;
+}
+
+@media only screen and (min-width: 480px) {
+  .register.flex h3 {
+    font-size: 1.2rem;
+  }
 }
