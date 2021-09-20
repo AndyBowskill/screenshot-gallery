@@ -2,7 +2,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import SignIn from '../SignIn.component';
 import { render, screen, fireEvent } from '@testing-library/react';
-import UserEvent from '@testing-library/user-event';
 
 const onRouteChange = jest.fn();
 const loadUser = jest.fn();
@@ -21,21 +20,29 @@ test('SignIn component displays correctly.', () => {
 });
 
 test('Email element changes correctly.', () => {
-
-  render(<SignIn onRouteChange={onRouteChange} loadUser={loadUser} loadScreenshots={loadScreenshots} />);
+  render(
+    <SignIn
+      onRouteChange={onRouteChange}
+      loadUser={loadUser}
+      loadScreenshots={loadScreenshots}
+    />
+  );
 
   const emailElement = screen.getByPlaceholderText(/Please enter email/);
 
-  fireEvent.change(emailElement, {target: {value: 'andy@gmail.com'}})
-
+  fireEvent.change(emailElement, { target: { value: 'andy@gmail.com' } });
 });
 
 test('Password element changes correctly.', () => {
-
-  render(<SignIn onRouteChange={onRouteChange} loadUser={loadUser} loadScreenshots={loadScreenshots} />);
+  render(
+    <SignIn
+      onRouteChange={onRouteChange}
+      loadUser={loadUser}
+      loadScreenshots={loadScreenshots}
+    />
+  );
 
   const passwordElement = screen.getByPlaceholderText(/Please enter password/);
 
-  fireEvent.change(passwordElement, {target: {value: '123'}})
-
+  fireEvent.change(passwordElement, { target: { value: '123' } });
 });
