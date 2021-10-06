@@ -11,7 +11,7 @@ const Item = (props) => {
         height='225px'
       />
       <p>Web address:</p>
-      <a href={props.item.url} target='_blank' rel='noopener'>
+      <a href={props.item.url} target='_blank' rel='noopener noreferrer'>
         <p>{props.item.url}</p>
       </a>
     </article>

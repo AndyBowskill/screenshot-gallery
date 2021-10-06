@@ -1,9 +1,9 @@
 .itemlist {
-  width: 85vw;
   margin: 0 auto 1em auto;
+  padding: 0 16px 16px 16px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 16px;
 }

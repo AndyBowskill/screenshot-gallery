@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 300px;
   border-radius: 5px;
-  padding: 20px;
+  padding: 16px;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   transition: transform 0.25s ease-out;

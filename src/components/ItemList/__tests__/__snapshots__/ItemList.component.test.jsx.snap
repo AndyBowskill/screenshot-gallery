@@ -18,7 +18,7 @@ exports[`ItemList component displays correctly. 1`] = `
     </p>
     <a
       href="www.amazon.co.uk"
-      rel="noopener"
+      rel="noopener noreferrer"
       target="_blank"
     >
       <p>
@@ -40,7 +40,7 @@ exports[`ItemList component displays correctly. 1`] = `
     </p>
     <a
       href="www.twitter.com"
-      rel="noopener"
+      rel="noopener noreferrer"
       target="_blank"
     >
       <p>
