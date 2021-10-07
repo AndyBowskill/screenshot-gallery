@@ -72,6 +72,21 @@ class App extends React.Component {
       });
   };
 
+  onDeleteButtonClick = (screenshotId) => {
+    fetch('https://screenshot-gallery-api.herokuapp.com/screenshot', {
+      method: 'delete',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: this.state.user.email,
+        id: screenshotId,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        this.loadScreenshots(data.screenshots);
+      });
+  };
+
   render() {
     return (
       <div>
@@ -105,7 +120,10 @@ class App extends React.Component {
                     onSaveButtonClick={this.onSaveButtonClick}
                     isDisabled={this.state.isDisabled}
                   />
-                  <ItemList items={this.state.screenshots} />
+                  <ItemList
+                    items={this.state.screenshots}
+                    onDeleteButtonClick={this.onDeleteButtonClick}
+                  />
                 </div>
               );
             default:

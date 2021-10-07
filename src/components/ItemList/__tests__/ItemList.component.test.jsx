@@ -13,8 +13,12 @@ const items = [
   },
 ];
 
+const onDeleteButtonClick = jest.fn();
+
 test('ItemList component displays correctly.', () => {
-  const component = renderer.create(<ItemList items={items} />);
+  const component = renderer.create(
+    <ItemList items={items} onDeleteButtonClick={onDeleteButtonClick} />
+  );
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });

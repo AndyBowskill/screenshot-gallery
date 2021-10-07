@@ -6,12 +6,21 @@
   padding: 16px;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
-  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease;
+  /* transition-property: background-color;
+  transition-timing-function: ease;
+  transition-duration: 0.25s; */
+
   border: 1px solid #0074d9;
 }
 
 .item p {
-  margin: 10px 0 0 0;
+  margin: 0;
+  padding: 0;
+}
+
+.item p.top {
+  margin: 12px 0 0 0;
   padding: 0;
 }
 
@@ -36,5 +45,26 @@
 }
 
 .item:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
+}
+
+.item button {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 0.8rem;
+  background-color: rgb(127, 219, 255);
+  color: #0074d9;
+  padding: 6px 12px;
+  margin: 16px 0px 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #0074d9;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 70px;
+  opacity: 0.9;
+}
+
+.item button:hover,
+.item button[hover] {
+  opacity: 1;
 }

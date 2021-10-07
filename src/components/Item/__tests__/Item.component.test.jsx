@@ -7,8 +7,10 @@ const item = {
   screenshot: '',
 };
 
+const onDeleteButtonClick = jest.fn();
+
 test('Item component displays correctly.', () => {
-  const component = renderer.create(<Item item={item} />);
+  const component = renderer.create(<Item item={item} onDeleteButtonClick={onDeleteButtonClick} />);
   let tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });

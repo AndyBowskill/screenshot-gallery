@@ -13,7 +13,9 @@ exports[`ItemList component displays correctly. 1`] = `
       src=""
       width="300px"
     />
-    <p>
+    <p
+      className="top"
+    >
       Web address:
     </p>
     <a
@@ -25,6 +27,12 @@ exports[`ItemList component displays correctly. 1`] = `
         www.amazon.co.uk
       </p>
     </a>
+    <button
+      onClick={[Function]}
+      type="submit"
+    >
+      Delete
+    </button>
   </article>
   <article
     className="item"
@@ -35,7 +43,9 @@ exports[`ItemList component displays correctly. 1`] = `
       src=""
       width="300px"
     />
-    <p>
+    <p
+      className="top"
+    >
       Web address:
     </p>
     <a
@@ -47,6 +57,12 @@ exports[`ItemList component displays correctly. 1`] = `
         www.twitter.com
       </p>
     </a>
+    <button
+      onClick={[Function]}
+      type="submit"
+    >
+      Delete
+    </button>
   </article>
 </div>
 `;
