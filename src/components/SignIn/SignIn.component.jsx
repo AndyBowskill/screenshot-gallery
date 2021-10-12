@@ -1,4 +1,5 @@
 import React from 'react';
+import { signinService } from '../../services/signin.service';
 
 import './SignIn.style.css';
 
@@ -19,23 +20,13 @@ class SignIn extends React.Component {
     this.setState({ password: event.target.value });
   };
 
-  onSignInSumbit = () => {
-    fetch('https://screenshot-gallery-api.herokuapp.com/signin', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: this.state.email,
-        password: this.state.password,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.user) {
-          this.props.loadUser(data.user);
-          this.props.loadScreenshots(data.screenshots);
-          this.props.onRouteChange('home');
-        }
-      });
+  onSignInSumbit = async () => {
+    const signin = await signinService(this.state.email, this.state.password);
+    if (signin.user) {
+      this.props.loadUser(signin.user);
+      this.props.loadScreenshots(signin.screenshots);
+      this.props.onRouteChange('home');
+    }
   };
 
   render() {
