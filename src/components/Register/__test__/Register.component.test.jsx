@@ -60,17 +60,3 @@ test('Password element changes correctly.', () => {
 
   fireEvent.change(passwordElement, { target: { value: '123' } });
 });
-
-test('Register button click event is successful.', () => {
-  render(
-    <Register
-      onRouteChange={onRouteChange}
-      loadUser={loadUser}
-      loadScreenshots={loadScreenshots}
-    />
-  );
-
-  const registerElement = screen.getAllByText('Register');
-
-  fireEvent.click(registerElement[1]);
-});

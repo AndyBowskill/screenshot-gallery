@@ -4,7 +4,8 @@ import Navigation from '../components/Navigation/Navigation.component';
 import ScreenshotForm from '../components/ScreenshotForm/ScreenshotForm.component';
 import Register from '../components/Register/Register.component';
 import SignIn from '../components/SignIn/SignIn.component';
-
+import { saveScreenshotService } from '../services/saveScreenshot.service';
+import { deleteScreenshotService } from '../services/deleteScreenshot.service';
 class App extends React.Component {
   constructor() {
     super();
@@ -55,36 +56,22 @@ class App extends React.Component {
     }
   };
 
-  onSaveButtonClick = () => {
+  onSaveButtonClick = async () => {
     this.setState({ isDisabled: true });
 
-    fetch('https://screenshot-gallery-api.herokuapp.com/screenshot', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: this.state.user.email,
-        url: this.state.inputWebsite,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        this.loadScreenshots(data.screenshots);
-      });
+    const saveScreenshot = await saveScreenshotService(
+      this.state.user.email,
+      this.state.inputWebsite
+    );
+    this.loadScreenshots(saveScreenshot.screenshots);
   };
 
-  onDeleteButtonClick = (screenshotId) => {
-    fetch('https://screenshot-gallery-api.herokuapp.com/screenshot', {
-      method: 'delete',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: this.state.user.email,
-        id: screenshotId,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        this.loadScreenshots(data.screenshots);
-      });
+  onDeleteButtonClick = async (screenshotId) => {
+    const deleteScreenshot = await deleteScreenshotService(
+      this.state.user.email,
+      screenshotId
+    );
+    this.loadScreenshots(deleteScreenshot.screenshots);
   };
 
   render() {

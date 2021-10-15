@@ -46,17 +46,3 @@ test('Password element changes correctly.', () => {
 
   fireEvent.change(passwordElement, { target: { value: '123' } });
 });
-
-test('Sign In button click event is successful.', () => {
-  render(
-    <SignIn
-      onRouteChange={onRouteChange}
-      loadUser={loadUser}
-      loadScreenshots={loadScreenshots}
-    />
-  );
-
-  const signinElement = screen.getAllByText('Sign In');
-
-  fireEvent.click(signinElement[1]);
-});

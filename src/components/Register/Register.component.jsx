@@ -1,4 +1,5 @@
 import React from 'react';
+import { registerService } from '../../services/register.service';
 import './Register.style.css';
 
 class Register extends React.Component {
@@ -23,24 +24,17 @@ class Register extends React.Component {
     this.setState({ password: event.target.value });
   };
 
-  onRegisterSumbit = () => {
-    fetch('https://screenshot-gallery-api.herokuapp.com/register', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: this.state.email,
-        name: this.state.name,
-        password: this.state.password,
-      }),
-    })
-      .then((response) => response.json())
-      .then((user) => {
-        if (user.id) {
-          this.props.loadUser(user);
-          this.props.loadScreenshots([]);
-          this.props.onRouteChange('home');
-        }
-      });
+  onRegisterSumbit = async () => {
+    const register = await registerService(
+      this.state.email,
+      this.state.name,
+      this.state.password
+    );
+    if (register.user) {
+      this.props.loadUser(register.user);
+      this.props.loadScreenshots([]);
+      this.props.onRouteChange('home');
+    }
   };
 
   render() {
