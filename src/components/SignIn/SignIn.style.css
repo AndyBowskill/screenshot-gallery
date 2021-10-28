@@ -41,6 +41,7 @@
   height: 1px;
   background-color: #0074d9;
   border: none;
+  margin-bottom: 22px;
 }
 
 @media only screen and (min-width: 480px) {

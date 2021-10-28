@@ -54,6 +54,7 @@ class SignIn extends React.Component {
             clientId='116269793133-7ih340bt80irmt46dhkpg2h5r8ntsg8f.apps.googleusercontent.com'
             buttonText='Sign in with Google'
             cookiePolicy={'single_host_origin'}
+            theme='dark'
             onSuccess={this.onGoogleSignInSubmit}
             onFailure={this.onGoogleFailure}
           />
