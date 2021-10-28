@@ -37,6 +37,12 @@
   opacity: 0.9;
 }
 
+.signin.flex hr {
+  height: 1px;
+  background-color: #0074d9;
+  border: none;
+}
+
 @media only screen and (min-width: 480px) {
   .signin.flex h3 {
     font-size: 1.2rem;
