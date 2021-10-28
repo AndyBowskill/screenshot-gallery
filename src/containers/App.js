@@ -20,6 +20,7 @@ class App extends React.Component {
         name: '',
       },
       isDisabled: true,
+      buttonText: 'Save',
     };
   }
 
@@ -59,6 +60,7 @@ class App extends React.Component {
 
   onInputWebsiteChange = (event) => {
     this.setState({ inputWebsite: event.target.value });
+    this.setState({ buttonText: 'Save' });
     if (event.target.value === '') {
       this.setState({ isDisabled: true });
     } else {
@@ -68,12 +70,15 @@ class App extends React.Component {
 
   onSaveButtonClick = async () => {
     this.setState({ isDisabled: true });
+    this.setState({ buttonText: 'Fetching...' });
 
     const saveScreenshot = await saveScreenshotService(
       this.state.user.email,
       this.state.inputWebsite
     );
     this.loadScreenshots(saveScreenshot.screenshots);
+    this.setState({ isDisabled: false });
+    this.setState({ buttonText: 'Save' });
   };
 
   onDeleteButtonClick = async (screenshotId) => {
@@ -117,6 +122,7 @@ class App extends React.Component {
                     onInputWebsiteChange={this.onInputWebsiteChange}
                     onSaveButtonClick={this.onSaveButtonClick}
                     isDisabled={this.state.isDisabled}
+                    buttonText={this.state.buttonText}
                   />
                   <ItemList
                     items={this.state.screenshots}

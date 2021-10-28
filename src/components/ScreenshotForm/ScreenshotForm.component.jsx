@@ -5,6 +5,7 @@ const ScreenshotForm = ({
   onInputWebsiteChange,
   onSaveButtonClick,
   isDisabled,
+  buttonText,
 }) => {
   return (
     <section>
@@ -17,7 +18,7 @@ const ScreenshotForm = ({
           onChange={onInputWebsiteChange}
         />
         <button disabled={isDisabled} onClick={onSaveButtonClick}>
-          Save
+          {buttonText}
         </button>
       </div>
     </section>
