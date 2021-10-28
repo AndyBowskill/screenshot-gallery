@@ -1,5 +1,7 @@
 import React from 'react';
 import { signinService } from '../../services/signin.service';
+import { googleSigninService } from '../../services/googleSignin.service';
+import GoogleLogin from 'react-google-login';
 
 import './SignIn.style.css';
 
@@ -29,12 +31,33 @@ class SignIn extends React.Component {
     }
   };
 
+  onGoogleSignInSubmit = async (response) => {
+    const email = response.profileObj.email;
+    if (email) {
+      const googleSignin = await googleSigninService(email);
+      this.props.loadGoogleUser(email);
+      this.props.loadScreenshots(googleSignin.screenshots);
+      this.props.onRouteChange('home');
+    }
+  };
+
+  onGoogleFailure = async (response) => {
+    console.log(response);
+  };
+
   render() {
     return (
       <section className='signin flex'>
         <div>
           <h3>Sign In</h3>
-
+          <GoogleLogin
+            clientId='116269793133-7ih340bt80irmt46dhkpg2h5r8ntsg8f.apps.googleusercontent.com'
+            buttonText='Sign in with Google'
+            cookiePolicy={'single_host_origin'}
+            onSuccess={this.onGoogleSignInSubmit}
+            onFailure={this.onGoogleFailure}
+          />
+          <hr />
           <label htmlFor='email'>Email</label>
           <input
             type='text'

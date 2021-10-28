@@ -43,6 +43,16 @@ class App extends React.Component {
     });
   };
 
+  loadGoogleUser = (email) => {
+    this.setState({
+      user: {
+        id: 0,
+        email: email,
+        name: '',
+      },
+    });
+  };
+
   loadScreenshots = (screenshots) => {
     this.setState({ screenshots: screenshots });
   };
@@ -96,6 +106,7 @@ class App extends React.Component {
                 <SignIn
                   onRouteChange={this.onRouteChange}
                   loadUser={this.loadUser}
+                  loadGoogleUser={this.loadGoogleUser}
                   loadScreenshots={this.loadScreenshots}
                 />
               );

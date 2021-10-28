@@ -8,7 +8,7 @@
   font-size: 1rem;
 }
 
-.signin input {
+.signin.flex input {
   font-family: 'Didact Gothic', sans-serif;
   font-size: 1rem;
   border: 1px solid #0074d9;
@@ -20,7 +20,7 @@
   margin: 12px 0 12px 0;
 }
 
-.signin button {
+.signin.flex button {
   font-family: 'Didact Gothic', sans-serif;
   font-size: 1rem;
   background-color: rgb(127, 219, 255);
@@ -35,10 +35,6 @@
   width: 340px;
   display: block;
   opacity: 0.9;
-}
-
-.signin button:hover {
-  opacity: 1;
 }
 
 @media only screen and (min-width: 480px) {

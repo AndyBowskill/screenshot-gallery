@@ -5,6 +5,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 
 const onRouteChange = jest.fn();
 const loadUser = jest.fn();
+const loadGoogleUser = jest.fn();
 const loadScreenshots = jest.fn();
 
 test('SignIn component displays correctly.', () => {
@@ -12,6 +13,7 @@ test('SignIn component displays correctly.', () => {
     <SignIn
       onRouteChange={onRouteChange}
       loadUser={loadUser}
+      loadGoogleUser={loadGoogleUser}
       loadScreenshots={loadScreenshots}
     />
   );
@@ -24,6 +26,7 @@ test('Email element changes correctly.', () => {
     <SignIn
       onRouteChange={onRouteChange}
       loadUser={loadUser}
+      loadGoogleUser={loadGoogleUser}
       loadScreenshots={loadScreenshots}
     />
   );
@@ -38,6 +41,7 @@ test('Password element changes correctly.', () => {
     <SignIn
       onRouteChange={onRouteChange}
       loadUser={loadUser}
+      loadGoogleUser={loadGoogleUser}
       loadScreenshots={loadScreenshots}
     />
   );
